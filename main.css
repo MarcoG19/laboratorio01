@@ -33,7 +33,7 @@ article {
     position: relative;
     display: flex;
     margin: 0 0 10px 0;
-
+    align-items: center;
 }
 
 .subtitle {
@@ -61,18 +61,22 @@ article .content-photo {
     background-size: cover;
 }
 
+/*
+    justify-content: flex-end;
+*/
+
 .sci {
     position: relative;
     display: flex;
+    float: right;
     align-items: center;
-    right: 0;
-    transform: translate(61%, 10%);
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 .sci li {
     list-style: none;
-    margin: 0 50px;
+    margin: 0 80px;
+
 }
 
 .sci li a img {
@@ -80,6 +84,58 @@ article .content-photo {
 }
 
 footer p{
+    margin-top: 90px;
     text-align: center;
     font-size: 1.2em;
+}
+
+@media (max-width: 700px) {
+
+    main {
+        margin: 20px 10px 30px 10px;
+    }
+
+    h1 {
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        font-size: 1.6em;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    h2{
+        font-size: 1.2em;
+    }
+
+    article .content {
+        position: relative;
+        margin-right: 0;
+
+    }
+
+    article .content-photo {
+        position: relative;
+        width: 65%;
+        height: 400px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 30px;
+    }
+
+    .sci {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 10px 0;
+        float: none;
+    }
+
+    .sci li {
+        list-style: none;
+        margin: 0 30px;
+    }
 }
